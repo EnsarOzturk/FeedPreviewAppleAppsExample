@@ -21,8 +21,8 @@ class NetworkManager {
             } else if let error = error {
                 
             }
-        
         }
         task.resume()
+    }
 }
-}
+

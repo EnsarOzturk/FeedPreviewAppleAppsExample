@@ -18,16 +18,15 @@ class AppListViewController: UIViewController, UICollectionViewDelegate, UIColle
 
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(UINib(nibName: "AppListCell", bundle: nil), forCellWithReuseIdentifier: "AppListCell")
+        collectionView.register(UINib(nibName: "AppListCell", bundle: nil),
+                                forCellWithReuseIdentifier: "AppListCell")
         
         let networkManager = NetworkManager()
         networkManager.fetchApps { response in
             self.appList =  response.feed.results
-            
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
-            
         }
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -42,15 +41,13 @@ class AppListViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         cell.nameLabel.text = app.name
         cell.artistNameLabel.text = app.artistName
-        
-        
+        cell.imageView.loadFrom(url: app.artworkUrl100)
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let size = CGSize(width: collectionView.frame.width, height: 96)
-        
         return size
     }
 }
