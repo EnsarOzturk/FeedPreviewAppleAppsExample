@@ -14,12 +14,12 @@ struct AppsResponse: Codable {
 struct Feed: Codable {
     let title: String
     let id: String
-    let auther: Auther
+    let author: Author
     let country: String
     let results: [App]
 }
 
-struct Auther: Codable {
+struct Author: Codable {
     let name: String
     let url: String
 }
