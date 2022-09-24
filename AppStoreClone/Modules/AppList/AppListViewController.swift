@@ -11,6 +11,8 @@ class AppListViewController: UIViewController, UICollectionViewDelegate, UIColle
 
     @IBOutlet weak var collectionView: UICollectionView!
 
+    var appList: [App] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,16 +20,29 @@ class AppListViewController: UIViewController, UICollectionViewDelegate, UIColle
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "AppListCell", bundle: nil), forCellWithReuseIdentifier: "AppListCell")
         
+        let networkManager = NetworkManager()
+        networkManager.fetchApps { response in
+            self.appList =  response.feed.results
+            
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+            
+        }
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return appList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AppListCell", for: indexPath) as! AppListCell
         
-        cell.nameLabel.text = "Ensar"
+        let app = appList[indexPath.row]
+        
+        cell.nameLabel.text = app.name
+        cell.artistNameLabel.text = app.artistName
+        
         
         
         return cell
