@@ -17,8 +17,8 @@ class AppListCell: UICollectionViewCell {
         super.awakeFromNib()
         
         imageView.layer.cornerRadius = 16
-        nameLabel.font = UIFont.systemFont(ofSize: 16)
-        artistNameLabel.font = UIFont.systemFont(ofSize: 11)
+        nameLabel.font = UIFont.systemFont(ofSize: 19)
+        artistNameLabel.font = UIFont.systemFont(ofSize: 12)
         nameLabel.textColor = UIColor.black
         artistNameLabel.textColor = UIColor.darkGray
         

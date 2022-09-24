@@ -21,6 +21,9 @@ class AppListViewController: UIViewController, UICollectionViewDelegate, UIColle
         collectionView.register(UINib(nibName: "AppListCell", bundle: nil),
                                 forCellWithReuseIdentifier: "AppListCell")
         
+        self.title = "Uygulamalar"
+        
+        
         let networkManager = NetworkManager()
         networkManager.fetchApps { response in
             self.appList =  response.feed.results
@@ -49,6 +52,14 @@ class AppListViewController: UIViewController, UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let size = CGSize(width: collectionView.frame.width, height: 96)
         return size
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let app = appList[indexPath.row]
+        let appDetail = storyboard?.instantiateViewController(identifier: "AppDetailViewController") as! AppDetailViewController
+        appDetail.url = app.url
+        
+        navigationController?.pushViewController(appDetail, animated: true)
     }
 }
 

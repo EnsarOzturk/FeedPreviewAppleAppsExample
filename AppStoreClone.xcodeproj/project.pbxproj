@@ -10,6 +10,8 @@
 		0AAC4C9528DF398A009D8A7D /* AppListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC4C9328DF398A009D8A7D /* AppListCell.swift */; };
 		0AAC4C9628DF398A009D8A7D /* AppListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AAC4C9428DF398A009D8A7D /* AppListCell.xib */; };
 		0AAC4C9A28DF485F009D8A7D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC4C9928DF485F009D8A7D /* UIImageView+Extension.swift */; };
+		0AAC4C9C28DF8BFE009D8A7D /* AppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC4C9B28DF8BFE009D8A7D /* AppDetailViewController.swift */; };
+		0AAC4C9F28DF920C009D8A7D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAC4C9E28DF920C009D8A7D /* WebKit.framework */; };
 		0AD961F928DF10D8002394BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD961F828DF10D8002394BF /* AppDelegate.swift */; };
 		0AD961FB28DF10D8002394BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD961FA28DF10D8002394BF /* SceneDelegate.swift */; };
 		0AD9620028DF10D8002394BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AD961FE28DF10D8002394BF /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 		0AAC4C9328DF398A009D8A7D /* AppListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListCell.swift; sourceTree = "<group>"; };
 		0AAC4C9428DF398A009D8A7D /* AppListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppListCell.xib; sourceTree = "<group>"; };
 		0AAC4C9928DF485F009D8A7D /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		0AAC4C9B28DF8BFE009D8A7D /* AppDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailViewController.swift; sourceTree = "<group>"; };
+		0AAC4C9E28DF920C009D8A7D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		0AD961F528DF10D8002394BF /* AppStoreClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AD961F828DF10D8002394BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AD961FA28DF10D8002394BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AAC4C9F28DF920C009D8A7D /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,11 +68,20 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		0AAC4C9D28DF920B009D8A7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AAC4C9E28DF920C009D8A7D /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0AD961EC28DF10D8002394BF = {
 			isa = PBXGroup;
 			children = (
 				0AD961F728DF10D8002394BF /* AppStoreClone */,
 				0AD961F628DF10D8002394BF /* Products */,
+				0AAC4C9D28DF920B009D8A7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +131,7 @@
 		0AD9620E28DF1199002394BF /* AppDetails */ = {
 			isa = PBXGroup;
 			children = (
+				0AAC4C9B28DF8BFE009D8A7D /* AppDetailViewController.swift */,
 			);
 			path = AppDetails;
 			sourceTree = "<group>";
@@ -213,6 +228,7 @@
 				0AD9621228DF1418002394BF /* AppsResponse.swift in Sources */,
 				0AAC4C9528DF398A009D8A7D /* AppListCell.swift in Sources */,
 				0AAC4C9A28DF485F009D8A7D /* UIImageView+Extension.swift in Sources */,
+				0AAC4C9C28DF8BFE009D8A7D /* AppDetailViewController.swift in Sources */,
 				0AD9621628DF30A3002394BF /* AppListViewController.swift in Sources */,
 				0AD9621428DF1E26002394BF /* NetworkManager.swift in Sources */,
 				0AD961F928DF10D8002394BF /* AppDelegate.swift in Sources */,
