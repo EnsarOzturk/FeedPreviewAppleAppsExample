@@ -15,7 +15,13 @@ class AppListCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        imageView.layer.cornerRadius = 16
+        nameLabel.font = UIFont.systemFont(ofSize: 16)
+        artistNameLabel.font = UIFont.systemFont(ofSize: 11)
+        nameLabel.textColor = UIColor.black
+        artistNameLabel.textColor = UIColor.darkGray
+        
     }
 
 }

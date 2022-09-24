@@ -37,13 +37,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kYV-J7-axw" secondAttribute="trailing" id="wWL-cR-RfD"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="uU5-Cb-q6q"/>
                     <connections>
                         <outlet property="collectionView" destination="kYV-J7-axw" id="8y0-Jp-fWf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131" y="-28"/>
+            <point key="canvasLocation" x="914" y="-28"/>
         </scene>
     </scenes>
     <resources>
